@@ -49,8 +49,10 @@ import {
   GraduationCap,
   Banknote,
   UserCheck,
+  Bus,
   ArrowLeftToLine,
   BookOpen,
+
 } from 'lucide-vue-next'
 
 import UserDropdown from './UserDropdown.vue'
@@ -81,6 +83,11 @@ const links = [
     label: 'Attendance',
     to: '/attendance',
     icon: UserCheck,
+  },
+  {
+    label: 'Bus Tracker',
+    to: '/tracker',
+    icon: Bus,
   },
   // {
   // 	// TODO: create School Diary Page with card like CRM and from ListView go to Resource Document of each Card

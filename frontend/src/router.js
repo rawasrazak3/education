@@ -29,6 +29,11 @@ const routes = [
     path: '/:catchAll(.*)',
     redirect: '/schedule',
   },
+  {
+    path: '/tracker',
+    name: 'Tracker',
+    component: () => import('@/pages/Tracker.vue'),
+  },
 ]
 
 let router = createRouter({

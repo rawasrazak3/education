@@ -33,6 +33,8 @@ export const studentStore = defineStore('education-student', () => {
   // })
 
   function getStudentInfo() {
+    console.log(studentInfo.value,"******************");
+    
     return studentInfo
   }
   function getCurrentProgram() {

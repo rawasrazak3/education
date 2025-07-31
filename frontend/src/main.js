@@ -4,7 +4,8 @@ import { createApp } from 'vue'
 import router from './router'
 import App from './App.vue'
 import { createPinia } from 'pinia'
-// import '../polyfills'
+import { initSocket } from './socket'
+
 
 import {
   Button,
@@ -17,14 +18,14 @@ import {
 
 // create a pinia instance
 let pinia = createPinia()
-
 let app = createApp(App)
-
 setConfig('resourceFetcher', frappeRequest)
-
+let socket = initSocket()
+app.provide('$socket', socket)
 app.use(pinia)
 app.use(router)
 app.use(resourcesPlugin)
+app.config.globalProperties.$socket = socket
 
 app.component('Button', Button)
 app.component('Card', Card)
